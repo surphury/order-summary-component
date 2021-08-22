@@ -1,0 +1,119 @@
+:root {
+    /* ### Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    /* ### Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    /* images */
+    --bg-image: url(../images/pattern-background-mobile.svg);
+    line-height: 150%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    color: var(--desaturated-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue);
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    font-weight: 700;
+}
+
+.title, .plan__p:first-of-type {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 1.2em;
+    max-width: min(400px, 90%);
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+}
+
+.card__body {
+    padding: 0 2em 1em;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: var(--very-pale-blue);
+}
+
+.plan__p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.plan__link {
+    margin-left: auto;
+    color: var(--bright-blue);
+}
+
+.button {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.button {
+    border-radius: .5em;
+    border-style: none;
+    width: 100%;
+    color: #fff;
+}
+
+.card__link {
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration-line: none;
+    color: inherit;
+}
+
+.button--purple {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em;
+    font-weight: 700;
+    background-color: var(--bright-blue);
+}
+
+@media screen and (min-width:990px) {
+    :root {
+        --bg-image: url(../images/pattern-background-desktop.svg);
+    }
+
+    .button--purple:hover,.plan__link:hover{
+        opacity: .5;
+    }
+
+    .card__link:hover {
+        color: var(--dark-blue);
+    }
+}
